@@ -114,7 +114,7 @@ body {
   width: auto;
   background-attachment: fixed;
   column-gap: 20px;
-  row-gap: 40px;
+  
   background-repeat: no-repeat;
  
   
@@ -141,9 +141,9 @@ body {
   display: flex;
   align-content: center;
   gap: 30px;
-  flex-grow: 1;
+ 
   flex-basis: 200;
-  column-gap: 25px;
+ 
   
 }
 
