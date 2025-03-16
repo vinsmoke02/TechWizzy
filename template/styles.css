@@ -83,11 +83,42 @@ body {
   background-color: #eee;
 }
 */
+
+
+@media (max-width: 768px) {
+  body {
+    flex-direction: column;
+    align-items: center;
+    align-content: center;
+  }
+}
+
 .container{
+  /*
   background-image: url(/TechWizzy/img/worst-gen2.jpg);
   background-position: center;
   height: 100dvh;
   width: auto;
+  background-attachment: fixed;
+  column-gap: 20px;
+  row-gap: 40px;
+  */
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-image: url(/TechWizzy/img/worst-gen2.jpg);
+  background-position: center;
+  height: 100dvh;
+  width: auto;
+  background-attachment: fixed;
+  column-gap: 20px;
+  row-gap: 40px;
+  background-repeat: no-repeat;
+  background-size: contain;
+  
+
 }
 
 .nav-bar{
@@ -110,6 +141,10 @@ body {
   display: flex;
   align-content: center;
   gap: 30px;
+  flex-grow: 1;
+  flex-basis: 200;
+  column-gap: 25px;
+  
 }
 
 button{
