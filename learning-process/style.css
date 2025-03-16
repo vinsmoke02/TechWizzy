@@ -1,0 +1,94 @@
+@import url('https://fonts.googleapis.com/css2?family=Pirata+One&display=swap');
+
+body {
+  margin: 0;
+  padding: 0;
+  background-image: url(/TechWizzy/img/cook-with-sanji.jpeg); /* Sanji Img */
+  background-attachment: fixed;
+  background-size: cover;
+  color: white;
+}
+
+header {
+  font-family: 'Pirata One', cursive;
+  text-align: center;
+  padding: 20px;
+  background-color: rgba(0, 0, 0, 0.508);
+  background-position: center;
+  
+}
+
+h1 {
+  font-size: 2rem;
+  text-shadow: 2px 2px 5px hsl(48, 100%, 50%);
+}
+
+.content {
+  text-align: center;
+  margin-top: 50px;
+}
+
+h2{
+  padding: 10px;
+}
+
+.buttons button {
+  
+  font-size: 15px;
+  padding: 15px 20px;
+  color: white;
+  background-color: transparent;
+  border: 2px solid hsla(176, 100%, 50%, 0.493);
+  border-radius: 10px;
+  text-transform: uppercase;
+  letter-spacing: 3px;
+  font-weight: bold;
+  cursor: pointer;
+  outline: none;
+  transition: 0.3s ease;
+  box-shadow: 0 0 5px hsla(176, 100%, 50%, 0.607), 0 0 25px hsl(176, 100%, 50%, 0.607), 0 0 50px hsl(176, 100%, 50%, 0.607);
+
+}
+
+.buttons button:hover {
+  background-color: hsla(42, 100%, 50%, 0.523);
+  color: black;
+  box-shadow: 0 0 10px hsl(176, 100%, 50%), 0 0 25px hsl(176, 100%, 50%), 0 0 80px hsl(176, 100%, 50%);
+
+}
+
+.buttons button :active{
+  transform: scale(0.95);
+}
+
+.learning-section {
+  display: none;
+  margin-top: 40px;
+  background-color: rgba(0, 0, 0, 0.578);
+  padding: 20px;
+  border-radius: 15px;
+}
+
+footer {
+  text-align: center;
+  margin-top: 50px;
+}
+
+
+table {
+    width: 60%;
+    margin: auto;
+    border-collapse: collapse;
+    margin-top: 20px;
+  }
+
+  th, td {
+    border: 2px solid black;
+    padding: 10px;
+    text-align: center;
+  }
+
+  th {
+    background-color: rgba(139, 118, 0, 0.538);
+    color: white;
+  }

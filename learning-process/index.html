@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Learning Process</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="icon" type="image/png" href="/TechWizzy/img/jolly-roger.png">
+</head>
+
+<body>
+  <header>
+    <h1>Learn Japanese with Sanji-san ⚓</h1>
+  </header>
+
+  <section class="content">
+    <h2>Choose Your Path:</h2>
+    <div class="buttons">
+      <button onclick="showSection('hiragana')">Hiragana</button>
+      <button onclick="showSection('hiragana-dakuten')">Hiragana-Dakuten-Handakuten</button>
+      <button onclick="showSection('katakana')">Katakana</button>
+      
+    </div>
+
+    <div id="hiragana" class="learning-section">
+      <h3>Hiragana Chart:</h3>
+      <table id="csvTable"></table>
+    </div>
+    
+    <div id="hiragana-dakuten" class="learning-section">
+        <h3>Hiragana-Dakuten/Handakuten Chart:</h3>
+        <table id="csvTable2"></table>
+    </div>
+
+    <div id="katakana" class="learning-section">
+      <h3>Katakana Chart:</h3>
+      <table id="csvTable3"></table>
+    </div>
+
+    </div>
+  </section>
+
+  <footer>
+    <p>Nami-Swannnnn!!!!!</p>
+  </footer>
+
+  <script src="script.js"></script>
+  <script src="data.js"></script>
+  <script src="data2.js"></script>
+  <script src="data3.js"></script>
+</body>
+
+</html>
