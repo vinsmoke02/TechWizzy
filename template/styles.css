@@ -1,96 +1,17 @@
-/*
-
-.nav-bar{
-  font-family: 'Franklin Gothic Medium';
-  font-size: 3rem;
-  font-weight: bold;
-  text-align: center;
-  padding: 20px;
-  background:url(/img/straw-hat-crew.jpeg) ;
-  background-position: center;
-  
-}
-.nav-head{
-  color: white;
-}
-
-.hme{
- 
-  padding: 25px;
-  display: flex;
-  flex-direction: column;
-  gap: 30px;
-  align-items: center;
-
-}
-
-button{
-  
-  cursor: pointer;
-  padding: 8px 18px;
-  border-radius: 10px;
-  border: none;
-  font-size: 18px;
-  font-weight: bolder;
-
-}
-
-button:hover{
-  transform: scale(1.1);
-}
-
-a{
-  text-decoration: none;
-  
-}
-
-*/
-/*
-
-.card{
-  transition: 0.5s ease;
-  cursor: pointer;
-
-}
-
-.container:hover > :not(:hover){
-  opacity: 0.3;
-}
-
-.card:hover{
-  transform: scale(1.1);
-}
-
-.container .card img{
-  max-width: 2px;
-}*/
 
 
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+
 }
 
-
-
-/*
-body {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  min-height: 100vh;
-  background-color: #eee;
-}
-*/
-
-
-@media (max-width: 768px) {
-  body {
-    flex-direction: column;
-    align-items: center;
-    align-content: center;
-  }
+body{
+  background: url(/TechWizzy/gif/one\ piece\ manga\ GIF.gif);
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
 }
 
 .container{
@@ -103,21 +24,15 @@ body {
   column-gap: 20px;
   row-gap: 40px;
   */
-  display: flex;
-  flex-wrap: wrap;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  background-image: url(/TechWizzy/img/worst-gen2.jpg);
-  background-position: center;
-  height: 100dvh;
-  width: auto;
-  background-attachment: fixed;
-  column-gap: 20px;
-  
-  background-repeat: no-repeat;
+
+  width: 100%;
+  max-width: 1200px;
+  margin: auto;
+  text-align: center;
+  padding: 20px;
  
-  
+
+
 
 }
 
@@ -138,12 +53,12 @@ body {
 
 /* Gallery Styling */
 .gallery {
-  display: flex;
-  align-content: center;
-  gap: 30px;
- 
-  flex-basis: 200;
- 
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); /* Responsive Grid */
+  gap: 20px;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
   
 }
 
@@ -194,4 +109,26 @@ button{
 
 .image:hover .overlay {
   opacity: 1;
+}
+
+
+
+@media (max-width: 768px) {
+  .nav-bar {
+    font-size: 1.5rem;
+    padding: 15px;
+  }
+
+  .container {
+    padding: 10px;
+  }
+
+  .gallery {
+    grid-template-columns: 1fr; /* 1 Column on smaller screens */
+    gap: 15px;
+  }
+
+  .image img {
+    max-height: 300px; /* Smaller images on mobile */
+  }
 }
