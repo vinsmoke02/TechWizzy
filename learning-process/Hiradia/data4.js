@@ -1,8 +1,8 @@
-fetch('data3.csv')
+fetch('hiradia.csv')
 .then(response => response.text())
-.then(data3 => {
-const rows = data3.split('\n');
-const table = document.getElementById('csvTable3');
+.then(hiradia => {
+const rows = hiradia.split('\n');
+const table = document.getElementById('csvTable');
 
 rows.forEach((row, index) => {
     const cells = row.split(',');
@@ -18,3 +18,9 @@ rows.forEach((row, index) => {
 });
 });
 reader.readAsText(file);
+
+
+function goBack() {
+    window.history.back(); // Navigates to the previous page
+}
+

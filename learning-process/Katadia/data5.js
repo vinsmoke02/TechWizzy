@@ -1,8 +1,8 @@
-fetch('data2.csv')
+fetch('katadia.csv')
 .then(response => response.text())
-.then(data2 => {
-const rows = data2.split('\n');
-const table = document.getElementById('csvTable2');
+.then(katadia => {
+const rows = katadia.split('\n');
+const table = document.getElementById('csvTable');
 
 rows.forEach((row, index) => {
     const cells = row.split(',');
@@ -18,3 +18,9 @@ rows.forEach((row, index) => {
 });
 });
 reader.readAsText(file);
+
+
+function goBack() {
+    window.history.back(); // Navigates to the previous page
+}
+

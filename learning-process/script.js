@@ -6,8 +6,12 @@ function showSection(sectionId) {
     });
   
     document.getElementById(sectionId).style.display = 'block';
-  }
+}
 
+  
+function goBack() {
+  window.history.back(); // Navigates to the previous page
+}
 
 
 

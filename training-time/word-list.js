@@ -4,14 +4,18 @@ const storageKey = "items";
 
 let items = [];
 
+// ✅ Load existing tasks when the page loads
+document.addEventListener("DOMContentLoaded", loadItems);
+
 // ✅ Add Task
 function addTask() {
-  if (taskInput.value === '') {
-    alert('Nanika tsuika shiro yo baka');
+  if (taskInput.value.trim() === '') {
+    alert('Nanika tsuika shiro yo baka!');
     return;
   }
 
   const task = {
+    id: Date.now(), // ✅ Assign a unique ID to each task
     text: taskInput.value,
     completed: false
   };
@@ -19,36 +23,40 @@ function addTask() {
   items.push(task);
   saveItems();
   renderItems();
-  taskInput.value = '';
+  taskInput.value = ''; // ✅ Clear input after adding
 }
 
 // ✅ Render Tasks
 function renderItems() {
   taskList.innerHTML = '';
 
-  items.forEach((item, index) => {
+  items.forEach((item) => {
     const li = document.createElement('li');
-    li.innerHTML = `
-      ${item.text}
-      <span class="delete-btn" onclick="deleteTask(${index})">❌</span>
-    `;
-    li.classList.toggle('completed', item.completed);
+    li.setAttribute('data-id', item.id); // ✅ Keep a unique identifier
 
-    li.addEventListener('click', () => toggleComplete(index));
+    li.innerHTML = `
+      <span class="${item.completed ? 'completed' : ''}">${item.text}</span>
+      <span class="delete-btn" onclick="deleteTask(${item.id})">❌</span>
+    `;
+
+    li.addEventListener('click', () => toggleComplete(item.id));
     taskList.appendChild(li);
   });
 }
 
-// ✅ Toggle Task Completed
-function toggleComplete(index) {
-  items[index].completed = !items[index].completed;
-  saveItems();
-  renderItems();
+// ✅ Toggle Task Completed (based on unique ID)
+function toggleComplete(taskId) {
+  const task = items.find(item => item.id === taskId);
+  if (task) {
+    task.completed = !task.completed;
+    saveItems();
+    renderItems();
+  }
 }
 
-// ✅ Delete Task
-function deleteTask(index) {
-  items.splice(index, 1);
+// ✅ Delete Task (using unique ID)
+function deleteTask(taskId) {
+  items = items.filter(item => item.id !== taskId); // ✅ Remove correct task
   saveItems();
   renderItems();
 }
@@ -65,5 +73,7 @@ function loadItems() {
   renderItems();
 }
 
-// ✅ Load tasks when page refreshes
-document.addEventListener("DOMContentLoaded", loadItems);
+function goBack() {
+  window.history.back(); // Navigates to the previous page
+}
+

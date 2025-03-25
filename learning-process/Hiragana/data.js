@@ -18,3 +18,9 @@ rows.forEach((row, index) => {
 });
 });
 reader.readAsText(file);
+
+
+function goBack() {
+    window.history.back(); // Navigates to the previous page
+}
+
